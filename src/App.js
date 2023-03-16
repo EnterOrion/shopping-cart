@@ -1,7 +1,13 @@
+import React from "react";
+import Navigation from "./components/Navigation";
+import Home from "./components/Home";
+import "./styles/style.scss";
+
 function App() {
   return (
     <div className="App">
-      <p>Hello shopping cart</p>
+      <Navigation />
+      <Home />
     </div>
   );
 }

@@ -1,0 +1,98 @@
+:root {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#root {
+    height: 100vh;
+}
+
+.App {
+    height: 100vh;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../images/red-beach.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+.home-main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hero-title {
+    font-size: 4rem;
+    background-color: rgb(0, 0, 0, .5);
+    padding: 1.75rem;
+    color: white;
+}
+
+.hero-additional {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.hero-shop {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(0, 0, 0, .5);
+    font-weight: 700;
+    margin-top: 3.5rem;
+}
+
+.hero-shop:hover {
+    text-decoration: underline;
+}
+
+
+li:hover {
+    color: black;
+}
+
+.logo:before {
+    content: url(../images/hexagon.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+nav {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    background-color: darkred;
+    color: white;
+    padding: .2rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-column {
+    display: flex;
+}
+
+.navigation-column {
+    display: flex;
+    gap: 10px;
+}
