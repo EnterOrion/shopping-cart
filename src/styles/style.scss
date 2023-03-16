@@ -16,6 +16,16 @@ body, html {
     height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+
 .home {
     display: flex;
     flex-direction: column;
@@ -40,7 +50,7 @@ body, html {
 .hero-title {
     font-size: 4rem;
     background-color: rgb(0, 0, 0, .5);
-    padding: 1.75rem;
+    padding: 1.75rem 2rem;
     color: white;
 }
 
@@ -49,26 +59,19 @@ body, html {
     margin-bottom: 0;
 }
 
-.hero-shop {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    color: white;
-    background-color: rgb(0, 0, 0, .5);
-    font-weight: 700;
-    margin-top: 3.5rem;
-}
-
-.hero-shop:hover {
-    text-decoration: underline;
-}
-
-
 li:hover {
     color: black;
 }
 
 .logo:before {
     content: url(../images/hexagon.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.logo:hover:before {
+    content: url(../images/hexagon-black.png);
     display: inline-block;
     vertical-align: middle;
     margin-right: .5rem;
@@ -95,4 +98,34 @@ ul {
 .navigation-column {
     display: flex;
     gap: 10px;
+    margin-right: .5rem;
+}
+
+.product-listing, .checkout-page {
+    background-image: url("../images/tinted-orange.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.product-listing, .checkout-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+}
+
+.product-cards-container, .checkout-container {
+    display: flex;
+    margin: 2rem 2.75rem;
+    min-height: 500px;
+    margin-bottom: 7%;
+    padding: 20px 40px;
+   
+}
+
+.checkout-and-title, .product-and-title {
+    background-color: rgb(227, 227, 227);
+
 }
