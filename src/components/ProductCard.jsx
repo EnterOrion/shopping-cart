@@ -4,9 +4,12 @@ const ProductCard = (props) => {
 
     return (
         <div className="product-card">
-            <div>{props.image}</div>
-            <div>{props.title}</div>
-            <div>{props.price}</div>
+            <img className="product-image" src={props.image} alt={props.alt}/>
+            <div className="product-info">
+                <div className="product-title">{props.title}</div>
+                <div className="product-price">{props.price}</div>
+            </div>
+            <div className="product-bottom"></div>
         </div>
     )
 }

@@ -106,7 +106,6 @@ ul {
     background-size: cover;
     height: 100%;
     width: 100%;
-    position: fixed;
 }
 
 .product-listing, .checkout-page {
@@ -118,14 +117,64 @@ ul {
 
 .product-cards-container, .checkout-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem 2.5rem;
     margin: 2rem 2.75rem;
-    min-height: 500px;
-    margin-bottom: 7%;
+    margin-top: 1.5rem;
     padding: 20px 40px;
+    font-family: 'DM Sans', sans-serif;
    
 }
 
 .checkout-and-title, .product-and-title {
-    background-color: rgb(227, 227, 227);
-
+    background-color: rgb(227, 227, 227, .5);
+    min-width: 80%;
+    max-width: 800px;
+    margin-top: 1.5rem;
 }
+
+.product-card {
+    border-color: #d8d3d3;
+    border-width: 2px;
+    border-style: solid;
+    border-bottom: none;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+
+.product-image {
+    padding: 3px 3px 0 3px;
+}
+
+.product-info {
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.product-price {
+    font-style: italic;
+}
+
+.product-bottom {
+    width: 100%;
+    height: 10px;
+    margin-top: 1rem;
+    background-color: darkred;
+}
+
+.page-title {
+    margin-bottom: 0;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 3rem;
+}
+
+img {
+    height: 260px;
+    width: 260px;
+}
+
