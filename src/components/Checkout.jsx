@@ -11,7 +11,7 @@ const Checkout = () => {
                     <div className="checkout-and-title">
                     <h1 className="page-title">Shopping Cart</h1>
                     <div className="checkout-container">
-                    <h2>Your cart is empty.</h2>
+                    <p>Your cart is empty.</p>
                     </div>
                     </div>
                 </div>

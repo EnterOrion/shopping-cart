@@ -101,14 +101,14 @@ ul {
     margin-right: .5rem;
 }
 
-.product-listing, .checkout-page {
+.product-listing, .checkout-page, .product-detail-page {
     background-image: url("../images/tinted-orange.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
 }
 
-.product-listing, .checkout-page {
+.product-listing, .checkout-page, .product-detail-page {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -127,7 +127,7 @@ ul {
    
 }
 
-.checkout-and-title, .product-and-title {
+.checkout-and-title, .product-and-title, .product-detail {
     background-color: rgb(227, 227, 227, .5);
     min-width: 80%;
     max-width: 800px;
@@ -139,6 +139,10 @@ ul {
     border-width: 2px;
     border-style: solid;
     border-bottom: none;
+}
+
+.product-card:hover {
+    border-color: darkred;
 }
 
 .product-title {
@@ -170,7 +174,11 @@ ul {
     margin-bottom: 0;
     font-family: 'Source Code Pro', monospace;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.4rem;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 img {
@@ -178,3 +186,44 @@ img {
     width: 260px;
 }
 
+.detail-title {
+    font-family: 'Source Code Pro', monospace; 
+}
+
+.detail-info {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.product-detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-detail, .checkout-and-title {
+    padding-bottom: 50vh; //temp
+}
+
+.checkout-button {
+    background-color: black;
+    color: white;
+    padding: 0.4em 2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.detail-image {
+    border: 1px solid black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
