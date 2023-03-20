@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Navigation from "./Navigation";
 import useItemStore from "../contexts/CartContext";
+import CartIcon from "../images/carro.png"
 
 const Checkout = () => {
   const items = useItemStore((state) => state.itemsArray);
@@ -126,7 +127,10 @@ const Checkout = () => {
       <Navigation />
       <div className="checkout-page">
         <div className="checkout-and-title">
-          <h1 className="page-title">Shopping Cart</h1>
+          <div className="icon-header">
+            <img className="cart-icon" src={CartIcon} alt="Cart icon" />
+            <h1 className="page-title">Shopping Cart</h1>
+          </div>
           <div className="checkout-container">
             {listItems.length == 0 && <p>Your cart is empty!</p>}
             {listItems}
