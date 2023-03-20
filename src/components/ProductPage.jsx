@@ -22,7 +22,8 @@ const ProductPage = () => {
             }
         }
         addItem(
-            {   image: thisProduct.img,
+            {   id: items.length + 1,
+                image: thisProduct.img,
                 name: thisProduct.name, 
                 price: thisProduct.price,
                 quantity: 1

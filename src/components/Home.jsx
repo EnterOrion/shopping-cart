@@ -21,7 +21,7 @@ const Home = () => {
                 style={{
                     fontSize: '2rem',
                     padding: '1rem 2.3rem',
-                    color: 'rgb(212, 212, 212)',
+                    color: 'white',
                     backgroundColor: 'rgb(0, 0, 0, .5)',
                     fontWeight: 700,
                     marginTop: '.5rem',
