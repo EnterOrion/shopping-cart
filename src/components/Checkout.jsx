@@ -100,6 +100,14 @@ const Checkout = () => {
             className="remove-item"
             value={element.name}
             onClick={() => {
+
+              setItemDisplay(
+                itemDisplay.filter(a =>
+                a.id !== element.id
+                )
+            );
+
+
               for (let i = 0; i < items.length; i++) {
                 if (items[i].name === element.name) {
                   items.splice(i, 1);
