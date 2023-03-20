@@ -298,11 +298,13 @@ img {
 
 .modify-quantity {
     margin-right: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .modify-quantity:hover {
     color: rgb(197, 130, 6);
     cursor: pointer;
+  
 }
 
 .remove-item {
@@ -312,5 +314,6 @@ img {
 
 .remove-item:hover {
     color: red;
+    text-decoration: underline;
     cursor: pointer;
 }
