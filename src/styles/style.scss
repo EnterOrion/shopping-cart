@@ -147,6 +147,11 @@ ul {
 
 .product-title {
     font-weight: bold;
+    color: black;
+}
+
+.product-title:hover {
+    color: white;
 }
 
 
@@ -186,12 +191,27 @@ img {
     width: 260px;
 }
 
+.back-button {
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    background-color: black;
+    color: white;
+    padding: 0.2em 1em;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+}
+
 .detail-title {
     font-family: 'Source Code Pro', monospace; 
+    text-align: center;
 }
 
 .detail-info {
     font-family: 'DM Sans', sans-serif;
+    max-width: 50%;
+    position: relative;
 }
 
 .product-detail {
@@ -211,12 +231,18 @@ img {
     border: none;
     outline: none;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .checkout-button:hover {
     background-color: transparent;
     color: black;
-    border: 1px solid black;
+  
+}
+
+.back-button:hover {
+    background-color: transparent;
+    color: black;
 }
 
 .detail-image {
@@ -226,4 +252,65 @@ img {
 .button-container {
     display: flex;
     justify-content: flex-end;
+}
+
+.button-header {
+    width: 100%;
+}
+
+// fix alt tags
+// add some kind of alert after item added
+
+
+.checkout-item {
+    display: flex;
+    gap: 1rem;
+    border: 1px solid black;
+  
+    min-width: 450px; // investigate media queries and/or other sizing or positioning options 
+
+}
+
+.checkout-image {
+    width: 170px;
+    height: 170px;
+}
+
+.checkout-title {
+    max-width: 200px;
+}
+
+.checkout-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkout-description {
+    margin-top: 1rem;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modify-quantity {
+    margin-right: 1.5rem;
+}
+
+.modify-quantity:hover {
+    color: rgb(197, 130, 6);
+    cursor: pointer;
+}
+
+.remove-item {
+    font-weight: 400;
+    margin-bottom: 3%;
+}
+
+.remove-item:hover {
+    color: red;
+    cursor: pointer;
 }
