@@ -4,7 +4,6 @@ import App from "./App";
 import Products from "./components/Products";
 import Checkout from "./components/Checkout";
 import ProductPage from "./components/ProductPage";
-import { CartContextProvider } from "./contexts/CartContext";
 
 
 const RouteSwitch = () => {

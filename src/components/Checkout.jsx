@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from "react";
 import Navigation from "./Navigation";
 import useItemStore from "../contexts/CartContext";
@@ -32,7 +33,7 @@ const Checkout = () => {
   const listItems = itemDisplay.map((element) => {
     return (
       <div key={element.id} className="checkout-item">
-        <img className="checkout-image" src={element.image} alt="" />
+        <img className="checkout-image" src={element.image} alt={element.alt} />
         <div className="checkout-info">
           <div className="checkout-description">
             <div className="checkout-title">
@@ -45,9 +46,13 @@ const Checkout = () => {
                 <span
                   className="modify-quantity"
                   onClick={() => {
+                    if (element.quantity === 1) {
+                      return;
+                    }
+
                     setItemDisplay(
                       itemDisplay.map((x) => {
-                        if (x.id == element.id)
+                        if (x.id === element.id)
                           return {
                             ...x,
                             quantity: x.quantity - 1,
@@ -75,7 +80,7 @@ const Checkout = () => {
 
                     setItemDisplay(
                       itemDisplay.map((x) => {
-                        if (x.id == element.id)
+                        if (x.id === element.id)
                           return {
                             ...x,
                             quantity: x.quantity + 1,
@@ -132,7 +137,7 @@ const Checkout = () => {
             <h1 className="page-title">Shopping Cart</h1>
           </div>
           <div className="checkout-container">
-            {listItems.length == 0 && <p>Your cart is empty!</p>}
+            {listItems.length === 0 && <p>Your cart is empty!</p>}
             {listItems}
           </div>
         {listItems.length > 0  && <div className="checkout-total"><strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`}</div>}

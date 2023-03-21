@@ -1,13 +1,13 @@
 import React from "react";
 import {useParams} from "react-router-dom";
-import productRecords from "../assets/productRecords";
+import productsArray from "../assets/productRecords";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import useItemStore from "../contexts/CartContext";
 
 const ProductPage = () => {
      const {productId} = useParams();
-     const thisProduct = productRecords.find(prod => prod.id == productId);
+     const thisProduct = productsArray.find(prod => prod.id === productId);
      const items = useItemStore((state) => state.itemsArray);
 
      const addItem = useItemStore((state) => state.addItem)
@@ -23,6 +23,7 @@ const ProductPage = () => {
         addItem(
             {   id: items.length + 1,
                 image: thisProduct.img,
+                alt: thisProduct.alt,
                 name: thisProduct.name, 
                 price: thisProduct.price,
                 quantity: 1
@@ -39,7 +40,7 @@ const ProductPage = () => {
                         <button className="back-button"><Link to="/shop">Go back</Link></button>
                         <h1 className="detail-title">{thisProduct.name}</h1>
                     </div>
-                    <img className="detail-image" src={thisProduct.img} alt="" />
+                    <img className="detail-image" src={thisProduct.img} alt={thisProduct.alt} />
                     <div className="detail-info">
                         <p className="detail-price"><strong>Price:</strong> ${thisProduct.price}</p>
                         <p className="detail-description"><strong>Description:</strong> {thisProduct.description}</p>
