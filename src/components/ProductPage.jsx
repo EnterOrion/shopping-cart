@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import useItemStore from "../contexts/CartContext";
 
 const ProductPage = () => {
+    const [fade, setFade] = React.useState(0);
+
      const {productId} = useParams();
      const thisProduct = productsArray.find(prod => prod.id === productId);
      const items = useItemStore((state) => state.itemsArray);
@@ -29,6 +31,7 @@ const ProductPage = () => {
                 quantity: 1
                 
             });
+           
      }
 
      return (
@@ -44,7 +47,13 @@ const ProductPage = () => {
                     <div className="detail-info">
                         <p className="detail-price"><strong>Price:</strong> ${thisProduct.price}</p>
                         <p className="detail-description"><strong>Description:</strong> {thisProduct.description}</p>
-                        <div className="button-container"><button className="checkout-button" onClick={addItemManager}>Add to Cart</button></div>
+                        <div className="item-added" fade={fade}   onAnimationEnd={() => setFade(0)}>Item Added!</div>
+                        <div className="button-container"><button className="checkout-button" onClick={() => {setFade(1)
+                        addItemManager()}}
+        
+                     
+                      
+                        >Add to Cart</button></div>
                     </div>
                 </div>
         </div>

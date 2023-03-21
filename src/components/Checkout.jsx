@@ -140,7 +140,10 @@ const Checkout = () => {
             {listItems.length === 0 && <p>Your cart is empty!</p>}
             {listItems}
           </div>
-        {listItems.length > 0  && <div className="checkout-total"><strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`}</div>}
+        {listItems.length > 0  && <div className="checkout-total"><strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`} <br />
+        <button className="checkout-button">Checkout</button>
+        </div>}
+
         </div>
       </div>
     </div>
