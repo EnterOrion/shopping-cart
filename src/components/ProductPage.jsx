@@ -16,7 +16,6 @@ const ProductPage = () => {
 
         for (let i = 0; i < items.length; i++) {
             if (items[i].name === thisProduct.name) {
-                console.log(true)
                 items[i].quantity = items[i].quantity + 1
                 return;
             }
