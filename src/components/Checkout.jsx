@@ -2,7 +2,8 @@
 import React, {useEffect, useState} from "react";
 import Navigation from "./Navigation";
 import useItemStore from "../contexts/CartContext";
-import CartIcon from "../images/carro.png"
+import CartIcon from "../images/carro.png";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const items = useItemStore((state) => state.itemsArray);
@@ -28,7 +29,9 @@ const Checkout = () => {
   }
 
 
-
+  const checkoutManager = () => {
+      items.length = 0;
+  }
 
   const listItems = itemDisplay.map((element) => {
     return (
@@ -36,9 +39,11 @@ const Checkout = () => {
         <img className="checkout-image" src={element.image} alt={element.alt} />
         <div className="checkout-info">
           <div className="checkout-description">
+          <Link to={`/shop/${element.id}`}>
             <div className="checkout-title">
-              <strong>{element.name}</strong>
+             <strong>{element.name}</strong>
             </div>
+            </Link>
             <div>${element.price}</div>
             <div>Quantity: {element.quantity}</div>
             <div className="modify-quantity-buttons">
@@ -141,7 +146,7 @@ const Checkout = () => {
             {listItems}
           </div>
         {listItems.length > 0  && <div className="checkout-total"><strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`} <br />
-        <button className="checkout-button">Checkout</button>
+        <Link to="/checkout-complete"><button className="checkout-button" onClick={checkoutManager}>Checkout</button></Link>
         </div>}
 
         </div>

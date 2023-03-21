@@ -19,11 +19,12 @@ const ProductPage = () => {
         for (let i = 0; i < items.length; i++) {
             if (items[i].name === thisProduct.name) {
                 items[i].quantity = items[i].quantity + 1
+                 console.log(items); 
                 return;
             }
         }
         addItem(
-            {   id: items.length + 1,
+            {   id: productId,
                 image: thisProduct.img,
                 alt: thisProduct.alt,
                 name: thisProduct.name, 
@@ -31,7 +32,7 @@ const ProductPage = () => {
                 quantity: 1
                 
             });
-           
+          console.log(items); 
      }
 
      return (
