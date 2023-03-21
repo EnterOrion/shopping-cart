@@ -1,423 +1,430 @@
 :root {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 #root {
-    height: 100vh;
+  height: 100vh;
 }
 
 .App {
-    height: 100vh;
+  height: 100vh;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 a:hover {
-    color: black;
+  color: black;
 }
 
-
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url(../images/red-beach.png);
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../images/red-beach.png);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
 }
 
 .home-main {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10vh;
-    flex-direction: column;
-    font-family: 'Source Code Pro', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+  flex-direction: column;
+  font-family: "Source Code Pro", monospace;
 }
 
 .hero-title {
-    font-size: 4rem;
-    background-color: rgb(0, 0, 0, .5);
-    padding: 1.75rem 2rem;
-    color: white;
-    font-weight: bold;
-    font-style: italic;
+  font-size: 4rem;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 1.75rem 2rem;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .hero-additional {
-    font-size: 2rem;
-    margin-bottom: 0;
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
 li:hover {
-    color: black;
+  color: black;
 }
 
 .logo:before {
-    content: url(../images/hexagon.png);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: .5rem;
+  content: url(../images/hexagon.png);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .logo:hover:before {
-    content: url(../images/hexagon-black.png);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: .5rem;
+  content: url(../images/hexagon-black.png);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 nav {
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 300;
-    background-color: darkred;
-    color: white;
-    padding: .2rem;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  background-color: darkred;
+  color: white;
+  padding: 0.2rem;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo-column {
-    display: flex;
+  display: flex;
 }
 
 .navigation-column {
-    display: flex;
-    gap: 16px;
-    margin-right: .5rem;
+  display: flex;
+  gap: 16px;
+  margin-right: 0.5rem;
 }
 
 .product-listing {
-    background-image: url("../images/tinted-orange.jpg");
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+  background-image: url("../images/tinted-orange.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.checkout-page, .product-detail-page, .thank-you-page {
-    background-image: url("../images/tinted-orange.jpg");
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%;
+.checkout-page,
+.product-detail-page,
+.thank-you-page {
+  background-image: url("../images/tinted-orange.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
 }
 
-.product-listing, .checkout-page, .product-detail-page, .thank-you-page {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  
+.product-listing,
+.checkout-page,
+.product-detail-page,
+.thank-you-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.product-cards-container, .checkout-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.8rem 2.5rem;
-    margin: 2rem 2.75rem;
-    margin-top: 1.5rem;
-    padding: 20px 40px;
-    font-family: 'DM Sans', sans-serif;
-   
+.product-cards-container,
+.checkout-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem 2.5rem;
+  margin: 2rem 2.75rem;
+  margin-top: 1.5rem;
+  padding: 20px 40px;
+  font-family: "DM Sans", sans-serif;
 }
 
-.checkout-and-title, .product-and-title, .product-detail, .thank-you-container {
-    background-color: rgb(227, 227, 227, .5);
-    min-width: 80%;
-    max-width: 800px;
-    margin-top: 1.5rem;
-    position: relative;
+.checkout-and-title,
+.product-and-title,
+.product-detail,
+.thank-you-container {
+  background-color: rgb(227, 227, 227, 0.5);
+  min-width: 80%;
+  max-width: 800px;
+  margin-top: 1.5rem;
+  position: relative;
 }
 
 .thank-you {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 .thank-you-container {
-    max-height: 500px;
+  max-height: 500px;
 }
 
 .product-card {
-    border-color: #d8d3d3;
-    border-width: 2px;
-    border-style: solid;
-    border-bottom: none;
+  border-color: #d8d3d3;
+  border-width: 2px;
+  border-style: solid;
+  border-bottom: none;
 }
 
 .product-card:hover {
-    border-color: darkred;
+  border-color: darkred;
 }
 
-.product-title,.checkout-title {
-    font-weight: bold;
-    color: black;
+.product-title,
+.checkout-title {
+  font-weight: bold;
+  color: black;
 }
 
-.product-title:hover, .checkout-title:hover {
-    color: white;
+.product-title:hover,
+.checkout-title:hover {
+  color: white;
 }
-
 
 .product-image {
-    padding: 3px 3px 0 3px;
+  padding: 3px 3px 0 3px;
 }
 
 .product-info {
-    margin-top: 5px;
-    margin-left: 3px;
+  margin-top: 5px;
+  margin-left: 3px;
 }
 
 .product-price {
-    font-style: italic;
+  font-style: italic;
 }
 
 .product-bottom {
-    width: 100%;
-    height: 10px;
-    margin-top: 1rem;
-    background-color: darkred;
+  width: 100%;
+  height: 10px;
+  margin-top: 1rem;
+  background-color: darkred;
 }
 
 .page-title {
-    margin-bottom: 0;
-    font-family: 'Source Code Pro', monospace;
-    text-align: center;
-    font-size: 2.4rem;
+  margin-bottom: 0;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  font-size: 2.4rem;
 }
 
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 img {
-    height: 260px;
-    width: 260px;
+  height: 260px;
+  width: 260px;
 }
 
 .back-button {
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-    background-color: black;
-    color: white;
-    padding: 0.2em 1em;
-    border: 1px solid black;
-    outline: none;
-    cursor: pointer;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  background-color: black;
+  color: white;
+  padding: 0.2em 1em;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
 }
 
 .detail-title {
-    font-family: 'Source Code Pro', monospace; 
-    text-align: center;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
 }
 
 .detail-info {
-    font-family: 'DM Sans', sans-serif;
-    max-width: 50%;
-    position: relative;
+  font-family: "DM Sans", sans-serif;
+  max-width: 50%;
+  position: relative;
 }
 
 .product-detail {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.product-detail, .checkout-and-title, .thank-you-container {
-    padding-bottom: 10%; 
+.product-detail,
+.checkout-and-title,
+.thank-you-container {
+  padding-bottom: 10%;
 }
 
 .checkout-button {
-    background-color: black;
-    color: white;
-    padding: 0.4em 2em;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 0.4em 2em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid black;
 }
 
 .checkout-button:hover {
-    background-color: transparent;
-    color: black;
-  
+  background-color: transparent;
+  color: black;
 }
 
 .back-button:hover {
-    background-color: transparent;
-    color: black;
+  background-color: transparent;
+  color: black;
 }
 
 .detail-image {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .button-container {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button-header {
-    width: 100%;
+  width: 100%;
 }
 
 // add some kind of alert after item added
 
-
 .checkout-item {
-    display: flex;
-    gap: 1rem;
-    border: 1px solid black;
-  
-    min-width: 60%;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid black;
+
+  min-width: 60%;
 }
 
 .checkout-image {
-    width: 170px;
-    height: 170px;
+  width: 170px;
+  height: 170px;
 }
 
 .checkout-title {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .checkout-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .checkout-description {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .checkout-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modify-quantity {
-    margin-right: 1.5rem;
-    font-size: 1.2rem;
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .modify-quantity:hover {
-    color: rgb(192, 0, 0);
-    cursor: pointer;
-  
+  color: rgb(192, 0, 0);
+  cursor: pointer;
 }
 
 .remove-item {
-    font-weight: 400;
-    margin-bottom: 3%;
+  font-weight: 400;
+  margin-bottom: 3%;
 }
 
 .remove-item:hover {
-    color: red;
-    text-decoration: underline;
-    cursor: pointer;
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .checkout-total {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-left: 18rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 18rem;
 }
 
 .cart-icon {
-    height: 2.8rem;
-    width: 2.8rem;
-    margin-top: auto;
-    margin-right: .8rem;
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-top: auto;
+  margin-right: 0.8rem;
 }
 
 .icon-header {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .checkout-button {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .item-added {
-    margin-left: auto;
-    position: absolute;
-    left: 100%;
-    bottom: 30%;
-    border: 1px solid black;
-    background-color: rgb(38, 112, 48);
-    color: white;
-    line-height: 1;
-    text-align: center;
-    padding: 1rem;
-    display: none;
+  margin-left: auto;
+  position: absolute;
+  left: 100%;
+  bottom: 30%;
+  border: 1px solid black;
+  background-color: rgb(38, 112, 48);
+  color: white;
+  line-height: 1;
+  text-align: center;
+  padding: 1rem;
+  display: none;
 }
 
 .item-added[fade="1"] {
-   display: block;
-    animation: fade 2s linear forwards;
+  display: block;
+  animation: fade 2s linear forwards;
 }
 
-  
-  @keyframes fade {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes fade {
+  0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
 
 @media (max-width: 1000px) {
-    .checkout-item {
-        min-width: 100%;
-    }
+  .checkout-item {
+    min-width: 100%;
+  }
 
-    .hero-title {
-        text-align: center;
-    }
+  .hero-title {
+    text-align: center;
+  }
 }
 
 @media (max-width: 500px) {
-    .checkout-item {
-        min-width: 120%;
-        flex-direction: column;
-    }
+  .checkout-item {
+    min-width: 120%;
+    flex-direction: column;
+  }
 
-    .checkout-image {
-        width: 100%;
-        height: 100%;
-    }
+  .checkout-image {
+    width: 100%;
+    height: 100%;
+  }
 
-    .checkout-total {
-        margin-left: 10rem;
-    }
+  .checkout-total {
+    margin-left: 10rem;
+  }
 
-    .hero-title {
-        font-size: 3rem;
-        padding: 0.875rem 1rem;
-    }
-
-
-    
+  .hero-title {
+    font-size: 3rem;
+    padding: 0.875rem 1rem;
+  }
 }
 
 @media (max-width: 350px) {
-    .item-added {
-        left: 90%;
-    }
+  .item-added {
+    left: 90%;
+  }
 }

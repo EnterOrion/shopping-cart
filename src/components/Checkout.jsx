@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation";
 import useItemStore from "../contexts/CartContext";
 import CartIcon from "../images/carro.png";
@@ -9,29 +9,24 @@ const Checkout = () => {
   const items = useItemStore((state) => state.itemsArray);
   const [itemDisplay, setItemDisplay] = useState([]);
 
-
   useEffect(() => {
-    for (let i = 0; i<items.length; i++) {
-      setItemDisplay(prevThingsArray => {
-        return [...prevThingsArray, items[i]]
-    })
-  }
+    for (let i = 0; i < items.length; i++) {
+      setItemDisplay((prevThingsArray) => {
+        return [...prevThingsArray, items[i]];
+      });
+    }
+  }, []);
 
-  }, [])
- 
   let costTotal = 0;
   for (let i = 0; i < items.length; i++) {
-    for (let j = 0; j <items[i].quantity; j++)
-    {
-        costTotal += items[i].price;
-    
+    for (let j = 0; j < items[i].quantity; j++) {
+      costTotal += items[i].price;
     }
   }
 
-
   const checkoutManager = () => {
-      items.length = 0;
-  }
+    items.length = 0;
+  };
 
   const listItems = itemDisplay.map((element) => {
     return (
@@ -39,10 +34,10 @@ const Checkout = () => {
         <img className="checkout-image" src={element.image} alt={element.alt} />
         <div className="checkout-info">
           <div className="checkout-description">
-          <Link to={`/shop/${element.id}`}>
-            <div className="checkout-title">
-             <strong>{element.name}</strong>
-            </div>
+            <Link to={`/shop/${element.id}`}>
+              <div className="checkout-title">
+                <strong>{element.name}</strong>
+              </div>
             </Link>
             <div>${element.price}</div>
             <div>Quantity: {element.quantity}</div>
@@ -71,9 +66,7 @@ const Checkout = () => {
                         items[i].quantity = items[i].quantity - 1;
                       }
                     }
-                  
-
-                   }}
+                  }}
                 >
                   -
                 </span>
@@ -82,7 +75,6 @@ const Checkout = () => {
                 <span
                   className="modify-quantity"
                   onClick={() => {
-
                     setItemDisplay(
                       itemDisplay.map((x) => {
                         if (x.id === element.id)
@@ -93,7 +85,6 @@ const Checkout = () => {
                         return x;
                       })
                     );
-
 
                     for (let i = 0; i < items.length; i++) {
                       if (items[i].name === element.name) {
@@ -111,13 +102,7 @@ const Checkout = () => {
             className="remove-item"
             value={element.name}
             onClick={() => {
-
-              setItemDisplay(
-                itemDisplay.filter(a =>
-                a.id !== element.id
-                )
-            );
-
+              setItemDisplay(itemDisplay.filter((a) => a.id !== element.id));
 
               for (let i = 0; i < items.length; i++) {
                 if (items[i].name === element.name) {
@@ -145,10 +130,17 @@ const Checkout = () => {
             {listItems.length === 0 && <p>Your cart is empty!</p>}
             {listItems}
           </div>
-        {listItems.length > 0  && <div className="checkout-total"><strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`} <br />
-        <Link to="/checkout-complete"><button className="checkout-button" onClick={checkoutManager}>Checkout</button></Link>
-        </div>}
-
+          {listItems.length > 0 && (
+            <div className="checkout-total">
+              <strong>Total:</strong> {`$ ${parseFloat(costTotal.toFixed(2))}`}{" "}
+              <br />
+              <Link to="/checkout-complete">
+                <button className="checkout-button" onClick={checkoutManager}>
+                  Checkout
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
