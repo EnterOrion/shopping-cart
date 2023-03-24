@@ -45,8 +45,8 @@ a:hover {
 }
 
 img {
-  height: 260px;
-  width: 260px;
+  height: 16.25rem;
+  width: 16.25rem;
 }
 
 .home {
@@ -116,7 +116,7 @@ ul {
 
 .navigation-column {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   margin-right: 0.5rem;
 }
 
@@ -150,7 +150,7 @@ ul {
   gap: 1.8rem 2.5rem;
   margin: 2rem 2.75rem;
   margin-top: 1.5rem;
-  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
   font-family: $body-font;
 }
 
@@ -160,7 +160,7 @@ ul {
 .thank-you-container {
   background-color: rgb(227, 227, 227, 0.5);
   min-width: 80%;
-  max-width: 800px;
+  max-width: 50rem;
   margin: 1.5rem;
   position: relative;
 }
@@ -170,7 +170,7 @@ ul {
 }
 
 .thank-you-container {
-  max-height: 500px;
+  max-height: 31.25rem;
 }
 
 .product-card {
@@ -196,12 +196,12 @@ ul {
 }
 
 .product-image {
-  padding: 3px 3px 0 3px;
+  padding: 0.188rem 0.188rem 0 0.188rem;
 }
 
 .product-info {
-  margin-top: 5px;
-  margin-left: 3px;
+  margin-top: 0.313rem;
+  margin-left: 0.188rem;
 }
 
 .product-price {
@@ -210,7 +210,7 @@ ul {
 
 .product-bottom {
   width: 100%;
-  height: 10px;
+  height: 0.625rem;
   margin-top: 1rem;
   background-color: $main-color;
 }
@@ -313,12 +313,12 @@ ul {
 }
 
 .checkout-image {
-  width: 170px;
-  height: 170px;
+  width: 10.625rem;
+  height: 10.625rem;
 }
 
 .checkout-title {
-  max-width: 200px;
+  max-width: 12.5rem;
 }
 
 .checkout-info {
