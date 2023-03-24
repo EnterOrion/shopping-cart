@@ -1,3 +1,21 @@
+$main-color: darkred;
+$secondary-color: white;
+$secondary-color-2: black;
+$title-font: "Source Code Pro", monospace;
+$body-font: "DM Sans", sans-serif;
+
+%flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+%flex-column-center-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 :root {
   box-sizing: border-box;
 }
@@ -19,17 +37,20 @@ html {
 
 a {
   text-decoration: none;
-  color: white;
+  color: $secondary-color;
 }
 
 a:hover {
-  color: black;
+  color: $secondary-color-2;
+}
+
+img {
+  height: 260px;
+  width: 260px;
 }
 
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @extend %flex-column-center;
   background-image: url(../images/red-beach.png);
   background-size: cover;
   height: 100%;
@@ -39,19 +60,17 @@ a:hover {
 }
 
 .home-main {
-  display: flex;
-  justify-content: center;
+  @extend %flex-column-center;
   align-items: center;
   margin-bottom: 10vh;
-  flex-direction: column;
-  font-family: "Source Code Pro", monospace;
+  font-family: $title-font;
 }
 
 .hero-title {
   font-size: 4rem;
   background-color: rgb(0, 0, 0, 0.5);
   padding: 1.75rem 2rem;
-  color: white;
+  color: $secondary-color;
   font-weight: bold;
   font-style: italic;
 }
@@ -61,11 +80,8 @@ a:hover {
   margin-bottom: 0;
 }
 
-li:hover {
-  color: black;
-}
-
-.logo:before {
+.logo:before,
+.logo:hover:before {
   content: url(../images/hexagon.png);
   display: inline-block;
   vertical-align: middle;
@@ -74,17 +90,18 @@ li:hover {
 
 .logo:hover:before {
   content: url(../images/hexagon-black.png);
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.5rem;
 }
 
 nav {
-  font-family: "Source Code Pro", monospace;
+  font-family: $title-font;
   font-weight: 300;
-  background-color: darkred;
-  color: white;
+  background-color: $main-color;
+  color: $secondary-color;
   padding: 0.2rem;
+}
+
+li:hover {
+  color: $secondary-color-2;
 }
 
 ul {
@@ -108,6 +125,9 @@ ul {
   background-size: cover;
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .checkout-page,
@@ -117,12 +137,6 @@ ul {
   background-size: cover;
   min-height: 100vh;
   width: 100%;
-}
-
-.product-listing,
-.checkout-page,
-.product-detail-page,
-.thank-you-page {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -137,7 +151,7 @@ ul {
   margin: 2rem 2.75rem;
   margin-top: 1.5rem;
   padding: 20px 40px;
-  font-family: "DM Sans", sans-serif;
+  font-family: $body-font;
 }
 
 .checkout-and-title,
@@ -167,18 +181,18 @@ ul {
 }
 
 .product-card:hover {
-  border-color: darkred;
+  border-color: $main-color;
 }
 
 .product-title,
 .checkout-title {
   font-weight: bold;
-  color: black;
+  color: $secondary-color-2;
 }
 
 .product-title:hover,
 .checkout-title:hover {
-  color: white;
+  color: $secondary-color;
 }
 
 .product-image {
@@ -198,12 +212,12 @@ ul {
   width: 100%;
   height: 10px;
   margin-top: 1rem;
-  background-color: darkred;
+  background-color: $main-color;
 }
 
 .page-title {
   margin-bottom: 0;
-  font-family: "Source Code Pro", monospace;
+  font-family: $title-font;
   text-align: center;
   font-size: 2.4rem;
 }
@@ -212,17 +226,12 @@ ul {
   text-decoration: underline;
 }
 
-img {
-  height: 260px;
-  width: 260px;
-}
-
 .back-button {
   margin-right: auto;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  background-color: black;
-  color: white;
+  background-color: $secondary-color-2;
+  color: $secondary-color;
   padding: 0.2em 1em;
   border: 1px solid black;
   outline: none;
@@ -230,20 +239,18 @@ img {
 }
 
 .detail-title {
-  font-family: "Source Code Pro", monospace;
+  font-family: $title-font;
   text-align: center;
 }
 
 .detail-info {
-  font-family: "DM Sans", sans-serif;
+  font-family: $body-font;
   max-width: 50%;
   position: relative;
 }
 
 .product-detail {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  @extend %flex-column-center-align;
 }
 
 .product-detail,
@@ -253,8 +260,8 @@ img {
 }
 
 .checkout-button {
-  background-color: black;
-  color: white;
+  background-color: $secondary-color-2;
+  color: $secondary-color;
   padding: 0.4em 2em;
   border: none;
   outline: none;
@@ -264,12 +271,12 @@ img {
 
 .checkout-button:hover {
   background-color: transparent;
-  color: black;
+  color: $secondary-color-2;
 }
 
 .back-button:hover {
   background-color: transparent;
-  color: black;
+  color: $secondary-color-2;
 }
 
 .detail-image {
@@ -285,13 +292,23 @@ img {
   width: 100%;
 }
 
-// add some kind of alert after item added
+.cart-icon {
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-top: auto;
+  margin-right: 0.8rem;
+}
+
+.icon-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .checkout-item {
   display: flex;
   gap: 1rem;
   border: 1px solid black;
-
   min-width: 60%;
 }
 
@@ -315,9 +332,7 @@ img {
 }
 
 .checkout-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-column-center-align;
 }
 
 .modify-quantity {
@@ -347,19 +362,6 @@ img {
   margin-left: 18rem;
 }
 
-.cart-icon {
-  height: 2.8rem;
-  width: 2.8rem;
-  margin-top: auto;
-  margin-right: 0.8rem;
-}
-
-.icon-header {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 .checkout-button {
   margin-top: 1rem;
 }
@@ -371,7 +373,7 @@ img {
   bottom: 30%;
   border: 1px solid black;
   background-color: rgb(38, 112, 48);
-  color: white;
+  color: $secondary-color;
   line-height: 1;
   text-align: center;
   padding: 1rem;
