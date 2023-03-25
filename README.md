@@ -1,7 +1,7 @@
 # Shopping Cart
 
 ## About
-This is a fake website with a Boards of Canada theme, who are a Scottish electronic band. 
+This is a fake merch website with a Boards of Canada theme, who are a Scottish electronic band. 
 The website features a product page of six of their notable releases in vinyl which the user can add to their cart to "buy". 
 
 ## Tools 
