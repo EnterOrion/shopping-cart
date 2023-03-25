@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.2764ee1d.css",
+    "main.js": "/shopping-cart/static/js/main.a9ac03b4.js",
+    "static/media/red-beach.png": "/shopping-cart/static/media/red-beach.89e790b5a16b77bb3163.png",
+    "static/media/music-has-the-right-vinyl.jpg": "/shopping-cart/static/media/music-has-the-right-vinyl.7a70f896741a89c145aa.jpg",
+    "static/media/geogaddi-vinyl.jpeg": "/shopping-cart/static/media/geogaddi-vinyl.01d4f28f4e82ace53857.jpeg",
+    "static/media/tinted-orange.jpg": "/shopping-cart/static/media/tinted-orange.f94e69144155a519d270.jpg",
+    "static/media/the-campfire-headphase-vinyl.jpg": "/shopping-cart/static/media/the-campfire-headphase-vinyl.c2650fba22fb1bf8a1e8.jpg",
+    "static/media/music-has-the-right.jpg": "/shopping-cart/static/media/music-has-the-right.1e73ae46bc6c5a545d44.jpg",
+    "static/media/tomorrows-harvest.png": "/shopping-cart/static/media/tomorrows-harvest.248f876b0843a660c294.png",
+    "static/media/beautiful-place-vinyl.jpg": "/shopping-cart/static/media/beautiful-place-vinyl.0d416fd329580cf72ba0.jpg",
+    "static/media/trans-canada-highway-vinyl.jpg": "/shopping-cart/static/media/trans-canada-highway-vinyl.e759f88f08e3bc3f2b1e.jpg",
+    "static/media/geogaddi.jpg": "/shopping-cart/static/media/geogaddi.5f0bd818626bee830a56.jpg",
+    "static/media/the-campfire-headphase.jpg": "/shopping-cart/static/media/the-campfire-headphase.ff2f60e532b239634589.jpg",
+    "static/media/trans-canada-highway.png": "/shopping-cart/static/media/trans-canada-highway.a42741b1321944bb2b33.png",
+    "static/media/tomorrows-harvest-vinyl.jpg": "/shopping-cart/static/media/tomorrows-harvest-vinyl.d61e7dacfb2206b248c2.jpg",
+    "static/media/beautiful-place.jpg": "/shopping-cart/static/media/beautiful-place.3718fdb79de866cc6ad3.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.2764ee1d.css.map": "/shopping-cart/static/css/main.2764ee1d.css.map",
+    "main.a9ac03b4.js.map": "/shopping-cart/static/js/main.a9ac03b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2764ee1d.css",
+    "static/js/main.a9ac03b4.js"
+  ]
+}
