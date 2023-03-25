@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.2764ee1d.css",
-    "main.js": "/shopping-cart/static/js/main.a9ac03b4.js",
+    "main.js": "/shopping-cart/static/js/main.c394ce18.js",
     "static/media/red-beach.png": "/shopping-cart/static/media/red-beach.89e790b5a16b77bb3163.png",
     "static/media/music-has-the-right-vinyl.jpg": "/shopping-cart/static/media/music-has-the-right-vinyl.7a70f896741a89c145aa.jpg",
     "static/media/geogaddi-vinyl.jpeg": "/shopping-cart/static/media/geogaddi-vinyl.01d4f28f4e82ace53857.jpeg",
@@ -18,10 +18,10 @@
     "static/media/beautiful-place.jpg": "/shopping-cart/static/media/beautiful-place.3718fdb79de866cc6ad3.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.2764ee1d.css.map": "/shopping-cart/static/css/main.2764ee1d.css.map",
-    "main.a9ac03b4.js.map": "/shopping-cart/static/js/main.a9ac03b4.js.map"
+    "main.c394ce18.js.map": "/shopping-cart/static/js/main.c394ce18.js.map"
   },
   "entrypoints": [
     "static/css/main.2764ee1d.css",
-    "static/js/main.a9ac03b4.js"
+    "static/js/main.c394ce18.js"
   ]
 }
