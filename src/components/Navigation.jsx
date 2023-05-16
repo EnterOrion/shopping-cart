@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useItemStore from "../contexts/CartContext";
 
 const Navigation = () => {
+  // Manages the state of the cart on the nav bar
   const items = useItemStore((state) => state.itemsArray);
   const itemAmount = items.length;
 

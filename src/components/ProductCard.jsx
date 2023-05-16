@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
+  // If user is hovering over photo: display closeup of album cover
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {

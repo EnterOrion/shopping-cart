@@ -9,6 +9,7 @@ const Checkout = () => {
   const items = useItemStore((state) => state.itemsArray);
   const [itemDisplay, setItemDisplay] = useState([]);
 
+  // Gets contents of itemStore on mount
   useEffect(() => {
     for (let i = 0; i < items.length; i++) {
       setItemDisplay((prevThingsArray) => {
@@ -17,6 +18,7 @@ const Checkout = () => {
     }
   }, []);
 
+  // Price total
   let costTotal = 0;
   for (let i = 0; i < items.length; i++) {
     for (let j = 0; j < items[i].quantity; j++) {
@@ -24,10 +26,12 @@ const Checkout = () => {
     }
   }
 
+  // Clear the cart's state after checkout
   const checkoutManager = () => {
     items.length = 0;
   };
 
+  // Maps the cart's contents onto the page
   const listItems = itemDisplay.map((element) => {
     return (
       <div key={element.id} className="checkout-item">
@@ -46,10 +50,12 @@ const Checkout = () => {
                 <span
                   className="modify-quantity"
                   onClick={() => {
+                    // If quantity is at one, user should press 'remove' instead
                     if (element.quantity === 1) {
                       return;
                     }
 
+                    // Else decrease quantity by one
                     setItemDisplay(
                       itemDisplay.map((x) => {
                         if (x.id === element.id)
@@ -75,6 +81,7 @@ const Checkout = () => {
                 <span
                   className="modify-quantity"
                   onClick={() => {
+                    // Increase quantity by one
                     setItemDisplay(
                       itemDisplay.map((x) => {
                         if (x.id === element.id)
@@ -101,6 +108,7 @@ const Checkout = () => {
           <div
             className="remove-item"
             value={element.name}
+            // Removes item completely from cart
             onClick={() => {
               setItemDisplay(itemDisplay.filter((a) => a.id !== element.id));
 
